@@ -15,7 +15,15 @@
     <main role="main" class="flex-shrink-0">
       <div class="container">
         <h1 class="mt-5">Teste Apache - AWX</h1>
-        <p class="lead">Esse é um Apache provisionado no vCD.</p>
+        <p> HTTP version:
+          <strong>
+            <?php
+                $version = shell_exec('rpm -q httpd');
+                echo "$version\n";
+            ?>
+          </strong>
+        </p>
+        </br>
         <p>Pipeline criado com: <a href="https://about.gitlab.com/">Gitlab</a>,<a href="https://www.terraform.io/">Terraform</a> e <a href="https://www.ansible.com/"> Ansible</a></p>
       </div>
     </main>
